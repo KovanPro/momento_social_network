@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:social_network/screens/singinactive.dart';
 import '../others/colors.dart';
 
 class MainLoginscreen extends StatefulWidget {
@@ -157,7 +156,10 @@ class _MainLoginscreen extends State<MainLoginscreen> {
                           color: ColorConstants.loginbtnPrimaryColor),
                     ),
                     onTap: () {
-                      debugPrint("signin");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SigninActive()));
                     },
                   )
                 ],
